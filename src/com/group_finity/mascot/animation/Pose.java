@@ -1,0 +1,69 @@
+package com.group_finity.mascot.animation;
+
+import com.group_finity.mascot.Mascot;
+import com.group_finity.mascot.image.ImagePair;
+import com.group_finity.mascot.image.ImagePairs;
+
+import java.awt.*;
+
+/**
+ * Original Author: Yuki Yamada of Group Finity (http://www.group-finity.com/Shimeji/)
+ * Currently developed by Shimeji-ee Group.
+ */
+
+public class Pose {
+    private final String image;
+
+    private final int dx;
+
+    private final int dy;
+
+    private final int duration;
+
+    public Pose(final String image) {
+        this(image, 0, 0, 1);
+    }
+
+    public Pose(final String image, final int duration) {
+        this(image, 0, 0, duration);
+    }
+
+    public Pose(final String image, final int dx, final int dy, final int duration) {
+        this.image = image;
+        this.dx = dx;
+        this.dy = dy;
+        this.duration = duration;
+    }
+
+    @Override
+    public String toString() {
+        return "Pose (" + getImage() + "," + getDx() + "," + getDy() + "," + getDuration() + ")";
+    }
+
+    public void next(final Mascot mascot) {
+
+        mascot.setAnchor(new Point(mascot.getAnchor().x + (mascot.isLookRight() ? -getDx() : getDx()), mascot
+                .getAnchor().y + getDy()));
+        mascot.setImage(ImagePairs.getImage(this.getImageName(), mascot.isLookRight()));
+    }
+
+    public int getDuration() {
+        return this.duration;
+    }
+
+    public String getImageName() {
+        return this.image;
+    }
+
+    public ImagePair getImage() {
+        return ImagePairs.getImagePair(this.getImageName());
+    }
+
+    public int getDx() {
+        return this.dx;
+    }
+
+    public int getDy() {
+        return this.dy;
+    }
+}

@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Class-Path: ./ img/ conf/ ./lib/jna.jar ./lib/examples.jar ./lib/Absol
+ uteLayout.jar
+Main-Class: com.group_finity.mascot.Main
+
