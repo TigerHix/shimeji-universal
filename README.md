@@ -6,7 +6,7 @@ shimeji-universal is based on [Kilkakon's fork](http://kilkakon.com/projects/shi
 
 ### Why you made this?
 
-I play [Undertale](http://store.steampowered.com/app/391540/), and have seen [a shimeji](http://pkbunny.tumblr.com/) of my favourate character this morning. I got so excited and had immediately downloaded it, and it turns out that shimeji does not work properly with my 64-bit machine. So I fixed it.
+I play [Undertale](http://store.steampowered.com/app/391540/), and have found [a shimeji](http://pkbunny.tumblr.com/) of my favourate character this morning. I got so excited and had immediately downloaded it, and it turns out that shimeji does not work properly with my 64-bit machine. So I fixed it.
 
 ### How did you fix it?
 
