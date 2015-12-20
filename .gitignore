@@ -3,3 +3,5 @@
 conf
 img
 out
+*.iml
+/target
